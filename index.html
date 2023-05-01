@@ -16,7 +16,7 @@
     <link rel="manifest" href="site.webmanifest">
     <link rel="apple-touch-icon" href="favicon.png">
     <!-- Place favicon.ico in the root directory -->
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/main.css">
 
@@ -27,7 +27,10 @@
 <header class="gold">
     <div class="main-wrapper">
         <nav>
-            <ul>
+            <ul  class="topnav" id="myTopnav">
+                <li>  <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                    <i class="fa fa-bars"></i>
+                </a></li>
                 <li><a href="/#about-me">Про мене</a></li>
                 <li><a href="/#portfolio">Портфоліо</a></li>
                 <li><a href="/prices">Ціни</a></li>
@@ -42,10 +45,11 @@
     <div class="main-wrapper">
         <img class="main-logo" src="img/main-logo.svg" alt="VStasko - розкрию в тобі ідеал">
         <h1>VStasko - Розкрию в тобі ідеал</h1>
+    </div>
+    <div class="main-wrapper slogan">
         <h3>Хочеш разом розкриємо твій ідеал? <br>
             До цього тільки один крок</h3>
-        <button>Записатись</button>
-    </div>
+        <button>Записатись</button></div>
     <div class="main-picture">
         <span class="pic-overlay"></span>
         <img src="img/main-picture.jpg" alt="Вася Стасьо">
@@ -56,6 +60,7 @@
         <h2>Залиш свій номер телефона.<br>
             Ми зателефонуємо!</h2>
         <form>
+
             <label for="name"> Прізвище, Ім’я<input type="text" name="name" id="name"
                                                     placeholder="Василина Васько"></label>
             <label for="phone">Номер телефона<input type="tel" name="phone" id="phone"
@@ -181,7 +186,7 @@
             </div>
         </div>
     </div>
-</section>
+</section>-
 <footer id="contacts" class="gold">
     <div class="header-wrapper gold-gradient">
         <div class="main-wrapper">
@@ -193,6 +198,11 @@
             <h3>Соц мережа:  <span class="username"><a href="/">@vstaskoo</a></span></h3>
             <h3>Номер телефона: <a href="tel:+380509927317"> +380509927317</a></h3>
             <h3>Адреса: Такий то салон, вул. Така/46</h3>
+        </div>
+        <div class="call-to-action">
+            <img src="img/slogan.svg" alt="Розкрию в тобі ідеал">
+            <h3>Хочеш разом розкрити твій ідеал? До цього тільки один крок</h3><span class="hl"></span>
+            <button>Записатись</button>
         </div>
     </div>
 </footer>
@@ -213,6 +223,17 @@
     ga('send', 'pageview')
 </script>
 <script src="https://www.google-analytics.com/analytics.js" async></script>
+
+<script>
+    function myFunction() {
+        var x = document.getElementById("myTopnav");
+        if (x.className === "topnav") {
+            x.className += " responsive";
+        } else {
+            x.className = "topnav";
+        }
+    }
+</script>
 </body>
 
 </html>
